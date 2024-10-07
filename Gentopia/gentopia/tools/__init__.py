@@ -1,5 +1,6 @@
 from .basetool import BaseTool
 from .google_search import GoogleSearch
+from .pdf_reader import *
 from .google_scholar import *
 from .calculator import Calculator
 from .wikipedia import Wikipedia
@@ -17,6 +18,7 @@ from .duckduckgo import DuckDuckGo
 
 def load_tools(name: str) -> BaseTool:
     name2tool = {
+        "pdf_reader_and_summarizer": PDFReaderAndSummarizer,    
         "arxiv_search": ArxivSearch,
         "calculator": Calculator,
         "python_code_interpreter": PythonCodeInterpreter,
